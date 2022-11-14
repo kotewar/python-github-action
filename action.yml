@@ -1,0 +1,13 @@
+name: 'run-python-script'
+description: 'Installs a package and runs a python script'
+runs:
+  using: "composite"
+  steps:
+    - name: Install boto3
+      shell: bash
+      run: pip3 install boto3
+
+    - name: Run Python Script
+      shell: python
+      run: |
+        print("hello world")
